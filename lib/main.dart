@@ -18,52 +18,20 @@ class MyApp extends StatelessWidget {
       appBar: AppBar(
         title: Text('Home'),
       ),
-      body: Center(
-          child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.all(20),
-                  backgroundColor: Colors.pink,
-                  textStyle:
-                      TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20))),
-              onPressed: () {
-                mySnackbar('sohan', context);
-              },
-              child: Text('Button')),
-          TextButton(
-              style: TextButton.styleFrom(
-                  padding: EdgeInsets.all(20),
-                  foregroundColor: Colors.teal,
-                  textStyle: TextStyle(
-                    fontSize: 20,
-                  )),
-              onPressed: () {},
-              child: Text('Forword')),
-          IconButton(
-              style: IconButton.styleFrom(),
-              iconSize: 50,
-              onPressed: () {},
-              icon: Icon(
-                Icons.person,
-              )),
-          TextField(
-            decoration: InputDecoration(
-                border:
-                    OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
-                suffixIcon: Icon(Icons.mail)),
-          ),
-          TextField(
-            decoration: InputDecoration(
-                border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10)),
-                    suffixIcon: Icon(Icons.password)),),
-          )
-        ],
-      )),
+      body: Container(
+        margin: EdgeInsets.all(30),
+        padding: EdgeInsets.all(50),
+        height: 150,
+        width: 200,
+        decoration: BoxDecoration(
+          color: Colors.amber,
+          border: Border.all(width: 5),
+          borderRadius: BorderRadius.only(
+              topRight: Radius.circular(20), bottomLeft: Radius.circular(20)),
+        ),
+        child: Text("Container"),
+        // alignment: Alignment.center,
+      ),
     ));
   }
 }
