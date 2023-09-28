@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -8,51 +7,23 @@ void main() {
 class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: Scaffold(
-            appBar: AppBar(
-              title: Text('GridView'),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Aspect Ratio'),
+        ),
+        body: Center(
+          child: Container(
+            alignment: Alignment.center,
+            height: 300,
+            width: double.infinity,
+            color: Colors.black,
+            child: AspectRatio(
+              aspectRatio: 16 / 9,
+              child: Container(color: Colors.grey),
             ),
-            body: GridView(
-              padding: EdgeInsets.all(5),
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2, crossAxisSpacing: 2, mainAxisSpacing: 2),
-              children: [
-                Container(
-                  height: 200,
-                  width: 200,
-                  color: Colors.grey,
-                ),
-                Container(
-                  height: 200,
-                  width: 200,
-                  color: Colors.grey,
-                ),
-                Container(
-                  height: 200,
-                  width: 200,
-                  color: Colors.grey,
-                ),
-                Container(
-                  height: 200,
-                  width: 200,
-                  color: Colors.grey,
-                ),
-                Container(
-                  height: 200,
-                  width: 200,
-                  color: Colors.grey,
-                ),
-                Container(
-                  height: 200,
-                  width: 200,
-                  color: Colors.grey,
-                ),
-                Container(
-                  height: 200,
-                  width: 200,
-                  color: Colors.grey,
-                ),
-              ],
-            )));
+          ),
+        ),
+      ),
+    );
   }
 }
